@@ -16,4 +16,4 @@ jobs:
       with:
         maven-version: '3.8.4'
     - name: Run test
-      run: nvm run verify
+      run: mvn clean verify

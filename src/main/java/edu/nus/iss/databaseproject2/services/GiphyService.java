@@ -2,11 +2,10 @@ package edu.nus.iss.databaseproject2.services;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
-import java.io.StringReader;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -17,7 +16,6 @@ import jakarta.json.Json;
 import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
-import jakarta.json.JsonValue;
 
 @Service
 public class GiphyService {
@@ -28,6 +26,7 @@ public class GiphyService {
     
     //GIPHY_API_KEY
     // @Value("${giphy.api.key}")
+    // String API;
 
     public List<String> getResult(String q) {
         return getResult(q, 10, "pg");
