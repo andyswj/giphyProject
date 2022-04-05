@@ -19,8 +19,8 @@ class Databaseproject2ApplicationTests {
 	@Test
 	void shouldLoad10Images() {
 		List<String> gifs = giphySvc.getResult("dog");
-		// assertEquals(10, gifs.size(), "Default size 10");
-		assertEquals(11, gifs.size(), "Default size 10");
+		assertEquals(10, gifs.size(), "Default size 10");
+		// assertEquals(11, gifs.size(), "Default size 10");
 	}
 
 }
