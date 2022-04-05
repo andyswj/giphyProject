@@ -1,0 +1,19 @@
+name: Compile, test, deploy
+on: [ "push" ]
+jobs:
+  step1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Chekcout my repo
+      uses: actions/checkout@v3
+    - name: Setup Java 17
+      uses: actions/setup-java@v2
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Setup Maven
+      uses: stCarolas/setup-maven@v4.3
+      with:
+        maven-version: '3.8.4'
+    - name: Run test
+      run: nvm run verify

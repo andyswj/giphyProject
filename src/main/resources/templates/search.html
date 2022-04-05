@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Gifs</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h3>Your search on <span th:text="${search}" style="color:red; size: 30px"></span> are as follow:</h3>
+    <div class="row" th:each="x : ${url}">
+        <img src="" th:src="${x}" alt="">
+    </div>
+</body>
+</html>
